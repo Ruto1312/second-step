@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+
+      let sum = function (a, b) {
+        return a + b;
+      };
+
+      times = (a, b) => a * b;
+
+      times2 = (n) => n * 2;
+
+      let num1 = [1, 2, 3, 4, 5];
+      let result1 = num1.map((n) => n * 2);
+
+      let nums = [1, 2, 3, 4, 5];
+      let result = nums.filter((n) => n % 2);
+
+      let data = [
+        { name: "Alice", age: 22 },
+        { name: "Bob", age: 19 },
+        { name: "Chris", age: 18 },
+        { name: "Dave", age: 20 },
+        { name: "Eve", age: 24 },
+      ];
+
+      let names = data.map((user) => user.name);
+      let u20 = data.filter((user) => user.age <= 20);
+      let result2 = data
+        .filter((user) => user.age <= 20)
+        .map((user) => user.name);
+
+      //   let result3 = [];
+      //   for (let i = 0; i < data.lenth; i++) {
+      //     result3.push();
+      //   }
+    </script>
+  </body>
+</html>

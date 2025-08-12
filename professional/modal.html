@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      body {
+        width: 1000px;
+        margin: 20px auto;
+      }
+
+      #backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.5;
+        display: none;
+      }
+
+      #modal {
+        border-radius: 10px;
+        position: absolute;
+        top: -250px;
+        width: 40%;
+        left: 30%;
+        height: 250px;
+        background: #222;
+        transition: top 0.5s;
+      }
+
+      #modal h2 {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px 10px 0 0;
+        font-size: 21px;
+        background: #333;
+        color: white;
+        margin: 0;
+        padding: 20px;
+      }
+
+      #modal h2 span {
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Modal</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      similique nostrum reprehenderit odit delectus ea?
+    </p>
+    <button>Button</button>
+
+    <div id="backdrop"></div>
+    <div id="modal">
+      <h2>Modal Title <span>&times;</span></h2>
+    </div>
+
+    <script>
+      document.querySelector("button").onclick = show;
+      document.querySelector("#backdrop").onclick = hide;
+      document.querySelector("#modal h2 span").onclick = hide;
+
+      function show() {
+        document.querySelector("#backdrop").style.display = "block";
+        document.querySelector("#modal").style.top = "15%";
+      }
+
+      function hide() {
+        document.querySelector("#backdrop").style.display = "none";
+        document.querySelector("#modal").style.top = "-250px";
+      }
+    </script>
+  </body>
+</html>
